@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 import Selector from "./Selector";
-import useApi from "./useApi";
-import exchange from "../exchange.png";
+import useApi from "../../hooks/useApi";
+import exchange from "../../exchange.png";
+import styles from "./Converter.module.css";
 
 export default function Converter({
   fromCurrency,
@@ -9,7 +10,7 @@ export default function Converter({
   toCurrency,
   setToCurrency,
 }) {
-  const [sourceAmount, setSourceAmount] = useState(1);
+  const [sourceAmount, setSourceAmount] = useState(100);
   const [targetAmount, setTargetAmount] = useState("");
 
   const { data } = useApi({
@@ -64,36 +65,43 @@ export default function Converter({
 
   return (
     <>
-      <div className="from">
-        <input
-          type="number"
-          value={sourceAmount}
-          onChange={handleSourceChange}
-        />
-        <span>
-          <Selector
-            selectedCurrency={fromCurrency}
-            setSelectedCurrency={setFromCurrency}
+      <div className={styles.converterContainer}>
+        <div className={styles.from}>
+          <input
+            type="number"
+            value={sourceAmount}
+            onChange={handleSourceChange}
           />
-        </span>
-      </div>
-      <div className="swap-btn">
-        <button onClick={handleSwap}>
-          <img src={exchange} alt="swap" className="icon" />
-        </button>
-      </div>
-      <div className="to">
-        <input
-          type="number"
-          value={targetAmount}
-          onChange={handleTargetChange}
-        />
-        <span>
-          <Selector
-            selectedCurrency={toCurrency}
-            setSelectedCurrency={setToCurrency}
+          <span>
+            <Selector
+              selectedCurrency={fromCurrency}
+              setSelectedCurrency={setFromCurrency}
+            />
+          </span>
+        </div>
+        <div>
+          <button onClick={handleSwap} className={styles.swapBtn}>
+            <img src={exchange} alt="swap" className={styles.swapIcon} />
+          </button>
+        </div>
+        <div className={styles.to}>
+          <input
+            type="number"
+            value={targetAmount}
+            onChange={handleTargetChange}
           />
-        </span>
+          <span>
+            <Selector
+              selectedCurrency={toCurrency}
+              setSelectedCurrency={setToCurrency}
+            />
+          </span>
+        </div>
+        {sourceAmount && targetAmount && (
+          <div className={styles.conversionText}>
+            {sourceAmount} {fromCurrency} = {targetAmount} {toCurrency}
+          </div>
+        )}
       </div>
     </>
   );

@@ -1,0 +1,35 @@
+.chart {
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.periodBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  font-size: 1rem;
+  padding: 7px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.periodBtn button {
+  background-color: var(--text-primary);
+  color: white;
+}
+.periodBtn button:hover {
+  background-color: #363c42;
+}
+.periodBtn button.active {
+  background-color: #d3d4f7;
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+@media (max-width: 480px) {
+  .periodBtn {
+    font-size: 0.7rem;
+  }
+}
