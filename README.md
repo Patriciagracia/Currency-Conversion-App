@@ -69,4 +69,4 @@ Follow these steps to set up and run the project locally:
 
 The project uses Vite as the build tool.
 Ensure internet access during the first run to fetch necessary dependencies.
-See live demo [here](https://currency-converter-alpha-lilac.vercel.app/)
+See live demo [here](https://currency-conversion-app-patriciagracia.netlify.app/)
