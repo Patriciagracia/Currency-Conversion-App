@@ -29,13 +29,13 @@ Follow these steps to set up and run the project locally:
 1. **Clone the Repository**
 
    ```bash
-   git clone <repository-url>
+    git clone https://github.com/Patriciagracia/Currency-Conversion-App.git
    ```
 
 2. **Navigate to the Project Directory**
 
    ```bash
-   cd <project-directory>
+   cd Currency-Conversion-App
    ```
 
 3. **Install Dependencies**
@@ -69,3 +69,4 @@ Follow these steps to set up and run the project locally:
 
 The project uses Vite as the build tool.
 Ensure internet access during the first run to fetch necessary dependencies.
+See live demo [here](https://currency-converter-alpha-lilac.vercel.app/)

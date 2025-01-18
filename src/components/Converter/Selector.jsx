@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import styles from "./Converter.module.css";
 
 export default function Selector({ selectedCurrency, setSelectedCurrency }) {
   const currencies = {
@@ -45,6 +46,7 @@ export default function Selector({ selectedCurrency, setSelectedCurrency }) {
     <select
       value={selectedCurrency}
       onChange={(e) => setSelectedCurrency(e.target.value)}
+      className={styles.selector}
     >
       <option value="" disabled>
         Select a currency
