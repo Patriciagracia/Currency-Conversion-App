@@ -49,7 +49,7 @@ export default function App() {
             </a>{" "}
             {""} Open-sourced on {""}
             <a
-              href="https://github.com/Patriciagracia/currency-conversion"
+              href="https://github.com/Patriciagracia/Currency-Conversion-App"
               target="_blank"
               title="GitHub"
             >
