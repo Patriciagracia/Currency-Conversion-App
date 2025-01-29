@@ -22,7 +22,7 @@ Follow these steps to set up and run the project locally:
 ### Prerequisites
 
 - Ensure you have [Node.js](https://nodejs.org/) installed (version 18.x or higher is recommended).
-- Install a package manager like `npm` (bundled with Node.js).
+- Install the package manager `npm` .
 
 ### Steps
 
@@ -44,22 +44,10 @@ Follow these steps to set up and run the project locally:
    npm install
    ```
 
-   If you're using yarn, run:
-
-   ```bash
-   yarn install
-   ```
-
 4. **Run the Development Server**
 
    ```bash
    npm run dev
-   ```
-
-   or
-
-   ```bash
-   yarn dev
    ```
 
 5. **Access the Application**
